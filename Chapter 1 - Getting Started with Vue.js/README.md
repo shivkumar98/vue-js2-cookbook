@@ -35,11 +35,11 @@
 
 * Navigating to the website:
 
-![](2023-05-08-14-03-36.png)
+![](screenshots/2023-05-08-14-03-36.png)
 
 * We shall instruct JSFiddle to use the Vue library. We click on the JavaScript text in the bottom right corner and set the Framework to Vue 2.2.1:
 
-![](2023-05-08-14-05-36.png) 
+![](screenshots/2023-05-08-14-05-36.png) 
 
 * We create our Hello world app by instantiating the `Vue` class in the JavaScript quadrant:
 
@@ -57,7 +57,7 @@ new Vue({el:'app'})
 
 * Running the app:
 
-![](2023-05-08-14-10-51.png)
+![](screenshots/2023-05-08-14-10-51.png)
 
 ### How it works
 
@@ -75,7 +75,7 @@ new Vue({el:'app'})
 Shiv has {{0+1}} friends
 ```
 
-![](2023-05-08-14-22-09.png)
+![](screenshots/2023-05-08-14-22-09.png)
 
 * We can  use databinding to put numbers within variables
 
@@ -90,11 +90,9 @@ new Vue({
 })
 ```
 
-![](2023-05-08-14-26-30.png)
+![](screenshots/2023-05-08-14-26-30.png)
 
 * The HTML gets updated automatically whenever numberOfFriends is changed!✅
-
-
 
 
 
