@@ -59,7 +59,7 @@ new Vue({el:'app'})
 
 ![](screenshots/2023-05-08-14-10-51.png)
 
-### How it works
+### 🟥 How it works
 
 * The `Vue` instance was instantiated, it accepted an options object as a parameter. This is the central object of Vue - it defines and controls data and behaviour
 
@@ -94,6 +94,116 @@ new Vue({
 
 * The HTML gets updated automatically whenever numberOfFriends is changed!✅
 
+# 🧠 1.3 Writing Lists
+
+## 🟦 Lists
+
+* We shall see how to create a range using Vue.js
+
+* Using JFiddle, I write JavaScript as:
+
+```javascript
+new Vue({el: '#app'})
+```
+
+* I write HTML as:
+
+```html
+<div id="app">
+    <ul>
+        <li v-for="n in 4">Hello</li>
+    </ul>
+</div>
+```
+
+* This generates Hello 4 times:
+
+![](2023-05-08-14-40-54.png)
+
+* We can access the `n` within the for loop to create a countdown:
+
+```html
+<div id="app">
+    <ul>
+        <li v-for="n in 4">{{4-n}}</li>
+        <li>Launch missile!!</li>
+    </ul>
+</div>
+```
+
+![](2023-05-08-14-45-03.png)
+
+* Vue.js is one-indexed, so `n` goes from 1-4. The for loop uses enumeration
+
+## 🟦 Arrays
+
+* We could achieve the same functionality as above with an array!
+
+```javascript
+new Vue({
+    el: '#app',
+    data:{ countdown: [4,3,2,1,0]}
+})
+```
+
+```html
+<div id="app">
+    <ul>
+        <li v-for="n in countdown">{{n}}</li>
+        <li>Launch missile!!</li>
+    </ul>
+</div>
+```
+
+### 🟥 Arrays With Index
+
+* We can access th item AND index of an array:
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {animals: ['dog', 'cat', 'bird']}
+})
+```
+
+```html
+<div id="app">
+    <ul>
+        <li v-for="(animal,i) in animals">Animal: {{animal}}, index: {{i}}</li>
+    </ul>
+</div>
+```
+
+![](2023-05-08-15-26-24.png)
+
+* ⚠️Note: the index is always the second argument in the brackets⚠️
+
+## 🟦 Objects
+
+* We can also access variables of an object:
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        animals: {
+            dog: 'woof',
+            cat: 'meow',
+            bird: 'tweet'
+        }
+    }
+})
+```
+
+```html
+<div id="app">
+    <ul>
+        <li v-for="(value, key) in animals">The {{key}} goes {{value}}<li>
+    </ul>
+</div>
+```
+
+![](2023-05-08-16-24-06.png)
 
 
 
